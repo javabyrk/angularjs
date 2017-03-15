@@ -1,0 +1,40 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	
+	function m1(){	
+		
+		var studentName=document.getElementById("studentName").value;
+		
+		document.getElementById("d1").innerHTML = studentName.toUpperCase();
+		
+		document.getElementById("d2").innerHTML = studentName.toLowerCase();
+		
+	}
+
+	</script>
+
+	<body>
+	
+			Name <input id="studentName" type="text" name="studentName" onkeyup="m1();"/>
+			
+			<br/>
+			
+			<div id="d1"></div>	
+			<br/>
+			<div id="d2"></div>	
+						
+		
+	</body>
+
+</html>

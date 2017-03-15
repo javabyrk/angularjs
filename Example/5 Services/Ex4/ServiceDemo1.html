@@ -1,0 +1,45 @@
+<html>
+	<head>
+
+		<script src="js/angular.js">
+</script>
+		<script src="js/angular.min.js">
+</script>
+		<script src="js/app.js">
+</script>
+		<script src="controllers/MathController.js">
+
+</script>
+
+	</head>
+
+	<body ng-app="myApp">
+
+		<div ng-controller="MathController">
+
+			First Value :
+			<input type="text" ng-model="x" />
+			</br>
+			</br>
+			Second Value :
+			<input type="text" ng-model="y" />
+			</br>
+			</br>
+			<button ng-click="getSum()">
+				Sum
+			</button>
+			<button ng-click="getMultiply()">
+				Multiply
+			</button>
+			</br>
+			</br>
+			<span> Result :{{result}}</span>
+
+		</div>
+
+	</body>
+
+
+
+
+</html>

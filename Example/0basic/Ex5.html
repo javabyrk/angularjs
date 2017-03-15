@@ -1,0 +1,22 @@
+<html>
+	<script type="text/javascript">	
+	function m1(){			
+		var select=document.getElementById("s1");
+		var div=document.getElementById("d1");		
+		var tagName=select.options[select.selectedIndex].value;
+		var inputElement = document.createElement("input");		
+		inputElement.type= tagName;		
+		div.appendChild(inputElement);
+	}
+	</script>
+	<body>
+		<select id="s1">		
+			<option value="radio">radio</option>
+			<option value="checkbox">checkbox</option>
+			<option value="text">text</option>		
+		</select>			
+		<button onclick="m1();">Create</button>			
+			<br/>			
+			<div id="d1"></div>						
+	</body>
+</html>

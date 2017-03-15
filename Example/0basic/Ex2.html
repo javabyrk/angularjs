@@ -1,0 +1,27 @@
+<html>
+	<style>
+		div{
+			display:none;
+		}
+	</style>
+	<script type="text/javascript">	
+	function m1(){			
+		var studentName=document.getElementById("studentName").value;		
+		if(studentName!=''){
+			document.getElementById("d1").style.display='block';
+			document.getElementById("s1").innerHTML = studentName;		
+		}
+		else{
+			document.getElementById("d1").style.display='none';	
+		}
+	}
+	</script>
+	<body>	
+			Name <input id="studentName" type="text" name="studentName"
+								onkeyup="m1();"/>			
+			<br/>			
+			<div id="d1">
+				Welcome <span id="s1"></span>	
+			</div>					
+	</body>
+</html>

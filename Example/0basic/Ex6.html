@@ -1,0 +1,45 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	
+	function m1(){	
+		
+		var values = [1,4];
+		var unOrderList=document.getElementById("u1");
+		
+		for(var i=0;i<values.length;i++){
+		
+			var li = document.createElement('li');
+			
+			li.innerHTML = values[i];
+			
+			unOrderList.appendChild(li);
+			
+		}
+			
+	}
+
+	</script>
+
+	<body>
+	
+			<button onclick="m1();">Display</button>
+			
+			<br/>
+			
+			<div ><ul id="u1"></ul></div>	
+						
+		
+	</body>
+
+</html>

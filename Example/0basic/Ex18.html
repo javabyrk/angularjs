@@ -1,0 +1,52 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	
+	function m1(){	
+		
+		var values = [10,20];
+		
+		values.push(1);
+		values.push(4);
+		
+		
+		var selectBox=document.getElementById("s1");
+		
+		for(var i=0;i<values.length;i++){
+		
+			var optionElement = document.createElement('option');
+			
+			optionElement.text = values[i];
+			
+			optionElement.value = values[i]
+			
+			selectBox.appendChild(optionElement);
+			
+		}
+			
+	}
+
+	</script>
+
+	<body>
+	
+			<button onclick="m1();">Display</button>
+			
+			<br/>
+			
+			<div ><select id="s1"></select></div>	
+						
+		
+	</body>
+
+</html>

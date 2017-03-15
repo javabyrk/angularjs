@@ -1,0 +1,52 @@
+<html>
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}	
+	</style>
+	<script type="text/javascript">
+	var values = [1,2,3];
+
+	function m1(){		
+		var select=document.getElementById("s1");		
+		select.innerHTML = '';		
+		for(var i=0;i<values.length;i++)
+			select.innerHTML +='<option>'+values[i]+'</option>';
+		
+		var div=document.getElementById("div1");
+		
+		div.innerHTML = values.join(",");	
+	}
+	
+	function m2(){	
+		
+		var select=document.getElementById("s1");
+
+		var newNo=document.getElementById("newNo").value;
+		
+		values.push(newNo);
+		
+		var div=document.getElementById("div1");
+		
+		div.innerHTML = values.join(",");
+	}
+	
+	</script>
+
+	<body>
+			No <input type="text" id="newNo"/>
+			<button onclick="m1();">Display</button>
+			<button onclick="m2();">Add</button>
+			
+			<br/>
+			
+			<div ><select id="s1"></select></div>	
+			
+			<div id="div1"></div>	
+				
+		
+	</body>
+
+</html>

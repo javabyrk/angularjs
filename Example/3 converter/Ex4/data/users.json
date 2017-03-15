@@ -1,0 +1,25 @@
+[
+    {
+        "name": "student 1",
+        "address": "ameerpet",
+        "phone_number": "1234"
+    },
+    
+    {
+        "name": "student 2",
+        "address": "s r nagar",
+        "phone_number": "4567"
+    },
+    
+    {
+        "name": "student 3",
+        "address": "kukatpally",
+        "phone_number": "123456"
+    },
+    
+    {
+        "name": "student 4",
+        "address": "uppal",
+        "phone_number": "45678"
+    }
+]

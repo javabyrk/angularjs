@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!-- Import AngularJS library -->
+    <script type="text/javascript" src="js/angular.js"></script>
+    
+    <!-- Import application specific code -->
+    <script type="text/javascript" src="js/sample.js"></script>
+    <link href="css/sample.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+  <!-- This div will use the userApp application module -->
+    <div ng-app="userApp">
+      
+      <!-- This div will use the UserCtrl controller -->
+      <div ng-controller="UserCtrl">
+        <table class="table table-bordered">
+          <thead>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th></th>
+            <th ng-if="users.length > 0"></th>
+          </thead>
+          
+          <!-- Add a row for each user present in the model layer -->
+          <tbody ng-repeat="user in users" ng-switch on="user.state">
+
+            <!-- Edit Mode Template -->
+            <tr ng-switch-when="edit">
+              <td>
+                <input type="text" class="form-control" ng-model="user.name" />
+              </td>
+              <td>
+                <input type="text" class="form-control" ng-model="user.address" />
+              </td>
+              <td>
+                <input type="text" class="form-control" ng-model="user.phone_number" />
+              </td>
+              <td>
+                <input type="button" class="btn btn-success" ng-click="saveUser(user);" value="Save" />
+              </td>
+              <td>
+                <input type="button" class="btn btn-danger" ng-click="cancelEdit(user);" value="Cancel" />
+              </td>
+            </tr>
+
+            <!-- Deleted Mode Template -->
+            <tr class="danger" ng-switch-when="deleted">
+              <td>{{user.name}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.phone_number}}</td>
+              <td>
+                <input type="button" class="btn btn-danger" ng-click="deleteUser(user);" value="Delete Permanently" />
+              </td>
+              <td>
+                <input type="button" class="btn btn-success" ng-click="undoDelete(user)" value="Undo"/>
+              </td>
+            </tr>
+
+            <!-- Normal Mode Template -->
+            <tr ng-switch-default>
+              <td>{{user.name}} </td>
+              <td>{{user.address}}</td>
+              <td>{{user.phone_number}}</td>
+              <td>
+                <input type="button" class="btn btn-primary" ng-click="editUser(user);" value="Edit" />
+              </td>
+              <td>
+                <input type="button" class="btn btn-danger" ng-click="deleteUser(user);" value="Delete"/>
+              </td>
+            </tr>
+          </tbody>
+          
+          <!-- New User Form -->
+          <tbody>
+            <tr>
+              <td>
+              <input type="text" class="form-control" ng-model="newUser.name" />
+              </td>
+              <td>
+              <input type="text" class="form-control" ng-model="newUser.address" />
+              </td>
+              <td>
+              <input type="text" class="form-control" ng-model="newUser.phone_number" />
+              </td>
+              <td>
+              <input type="button" class="btn btn-primary" ng-click="addUser();" value="Add"/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

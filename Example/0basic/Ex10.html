@@ -1,0 +1,72 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	var values = [1,4,9];
+	
+	function m1(){	
+		
+		var select=document.getElementById("s1");
+		select.innerHTML = '';
+		for(var i=0;i<values.length;i++)
+			select.innerHTML +='<option>'+values[i]+'</option>';
+			
+	}
+	
+	function m2(){	
+		
+		var select=document.getElementById("s1");
+
+		var newNo=document.getElementById("newNo").value;
+		
+		values.push(newNo);
+		
+		document.getElementById("newNo").value = '';
+	
+		m1();	
+	}
+	
+	function m3(){	
+		
+		var select=document.getElementById("s1");
+		
+		values.splice(select.selectedIndex,1);
+		
+		m1();
+		
+	}
+	
+	function m4(){	
+		
+		values=[];
+		
+		m1();
+		
+	}
+
+	</script>
+
+	<body>
+			No <input type="text" id="newNo"/>
+			<button onclick="m1();">Display</button>
+			<button onclick="m2();">Add</button>
+			<button onclick="m3();">Remove</button>
+			<button onclick="m4();">RemoveAll</button>
+			
+			<br/>
+			
+			<div ><select id="s1"></select></div>	
+				
+		
+	</body>
+
+</html>

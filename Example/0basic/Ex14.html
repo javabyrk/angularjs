@@ -1,0 +1,50 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:300px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	function m1(){	
+		
+		var obj1=new Student(1,'student1');
+		
+		var obj2=new Student(2,'student2');
+		
+		var list = new Array();
+		
+		list.push(obj1);
+		
+		list.push(obj2);
+		
+		var ul = document.getElementById("ul");
+		
+		for(var i=0;i<list.length;i++)
+			ul.innerHTML += "<li>No is "+list[i].no+', name is :'+list[i].name+"</li>";
+			
+	}
+	
+	function Student(no,name){
+		this.no = no;
+		this.name=name;
+	}
+	
+	</script>
+
+	<body>
+			<button onclick="m1();">Display</button>
+			
+			<br/>
+			
+			<div> <ul id="ul"></ul></div>	
+				
+		
+	</body>
+
+</html>

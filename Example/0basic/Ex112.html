@@ -1,0 +1,36 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	function m1(){	
+		
+		var obj={'no':1,'name':'std1'};
+		
+		var div = document.getElementById("d1");
+		
+		div.innerHTML = "No is "+obj.no+" name is "+obj.name;
+			
+	}
+	
+	</script>
+
+	<body>
+			<button onclick="m1();">Display</button>
+			
+			<br/>
+			
+			<div id="d1"></div>	
+				
+		
+	</body>
+
+</html>

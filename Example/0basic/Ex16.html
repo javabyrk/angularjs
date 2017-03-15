@@ -1,0 +1,18 @@
+<html>
+<script type="text/javascript">
+function m1(){
+	var tc = document.getElementById("tc");
+	var submitElement = document.getElementById("b1");	
+	if(tc.checked)
+		submitElement.removeAttribute("disabled");
+	else
+		submitElement.setAttribute("disabled","");
+}
+</script>
+	<body>
+			<input id="tc" type="checkbox" name="tc" onclick="m1();" /> <br/>			
+			<input id="tc" type="text" name="tc" readonly/> <br/>			
+			<input id="b1" type="submit" value="submit" disabled/>
+			<br/>
+	</body>
+</html>

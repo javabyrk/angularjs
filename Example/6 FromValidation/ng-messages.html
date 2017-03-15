@@ -1,0 +1,35 @@
+<html ng-app="notesApp">
+<head><title>Notes App</title></head>
+<body>
+
+  <form name="simpleForm">
+    <input type="email"
+           name="uname"
+           ng-model="user.username"
+           required
+           ng-minlength="6">
+    <div ng-messages="simpleForm.uname.$error"
+         ng-messages-include="error-messages"></div>
+    <input type="password"
+           name="pwd"
+           ng-model="user.password"
+           required>
+    <div ng-messages="simpleForm.pwd.$error"
+         ng-messages-include="error-messages"></div>
+    <input type="submit"
+           value="Submit"
+           ng-disabled="simpleForm.$invalid">
+  </form>
+
+<script src="js/angular.js"></script>
+<script src="js/angular-messages.js"></script>
+<script type="text/ng-template" id="error-messages">
+  <div ng-message="required">This field is mandatory</div>
+  <div ng-message="minlength">Minimum length condition not met</div>
+  <div ng-message="email">Please enter a valid email address</div>
+</script>
+<script type="text/javascript">
+  angular.module('notesApp', ['ngMessages']);
+</script>
+</body>
+</html>

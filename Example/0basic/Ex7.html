@@ -1,0 +1,38 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	
+	function m1(){	
+		
+		var values = [1,4,9];
+		var select=document.getElementById("s1");
+		
+		for(var i=0;i<values.length;i++)
+			select.innerHTML +='<option>'+values[i]+'</option>';
+			
+	}
+
+	</script>
+
+	<body>
+	
+			<button onclick="m1();">Display</button>
+			
+			<br/>
+			
+			<div ><select id="s1"></select></div>	
+						
+		
+	</body>
+
+</html>

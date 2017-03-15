@@ -1,0 +1,38 @@
+<html>
+
+<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}
+	
+	</style>
+
+
+	<script type="text/javascript">
+	
+	function m1(){	
+		
+		var values = [1,4,9];
+		var div=document.getElementById("d1");
+		
+		for(var i=0;i<values.length;i++)
+			div.innerHTML +='<input type="checkbox">'+values[i]+'</input>';
+			
+	}
+
+	</script>
+
+	<body>
+	
+			<button onclick="m1();">Display</button>
+			
+			<br/>
+			
+			<div id="d1"></div>	
+						
+		
+	</body>
+
+</html>

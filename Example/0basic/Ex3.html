@@ -1,0 +1,25 @@
+<html>
+	<style>
+		div{
+			border: 2px solid red;
+			width:200px;
+			height:100px;
+		}	
+	</style>
+	<script type="text/javascript">
+	function m1(){			
+		var divTag=document.getElementById("d1");		
+		divTag.style.backgroundColor='lightblue';		
+		divTag.style.color='red';		
+	}	
+	function m2(){		
+		var divTag=document.getElementById("d1");		
+		divTag.style.backgroundColor='white';		
+		divTag.style.color='black';
+	}
+	</script>
+	<body>	
+		<div id="d1" onmouseover="m1();" onmouseout="m2();">
+					style changes using javascript</div>		
+	</body>
+</html>

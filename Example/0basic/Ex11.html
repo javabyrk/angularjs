@@ -1,0 +1,24 @@
+<html>
+	<script type="text/javascript">
+	function Student(no,firstname,lastname,age){		
+		this.no = no;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.age = age;	
+	}
+	Student.prototype.getName=Student_getName;
+	function Student_getName(){
+		return this.firstname+" "+this.lastname;
+	}	
+	function m1(){			
+	   var obj=new Student(1,'student1','K',23);		
+	   var div = document.getElementById("d1");		
+	   div.innerHTML = "No is "+obj.no+" name is "+obj.getName();			
+	}	
+	</script>
+	<body>
+			<button onclick="m1();">Display</button>			
+			<br/>			
+			<div id="d1"></div>							
+	</body>
+</html>
