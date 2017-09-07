@@ -1,0 +1,21 @@
+<html ng-app="UserApp">
+  <head>
+    <script src="js/angular.js"></script>
+    <!-- module files -->
+    <script src="js/app.js"></script>
+    <!-- controller files -->
+    <script src="js/login.controller.js"></script>
+    <!-- sevice files -->
+    <script src="js/user.service.js"></script>
+  </head>
+  <body>
+     <div ng-controller="LoginController as loginCtrl">
+        <form>
+          User name <input type="text" ng-model="loginCtrl.user.username"/><br/>
+          Password <input type="password" ng-model="loginCtrl.user.password"/><br/>
+
+          <button ng-click="loginCtrl.login()">Login</button>
+        </form>
+     </div>
+  </body>
+</html>
