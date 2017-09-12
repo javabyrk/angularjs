@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/Controller.js"></script>
+    <link href="js/jquery-ui.css" rel="stylesheet" />
+</head>
+    <body ng-app="popup">
+        <input type="text" datepicker="dd/mm/yy" ngModel="dob" class="datetimePicker" placeholder="Effective End Date"/>
+
+        {{dob}}
+
+        <input type="text" autocomplete ngModel="course" class="datetimePicker" placeholder="autocomplete"/>
+    </body>
+</html>

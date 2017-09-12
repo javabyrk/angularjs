@@ -1,0 +1,19 @@
+<html ng-app="studentApp">
+<head><title>Student App</title></head>
+<body>
+
+  <form name="myForm" novalidate>
+   <input type="text" name="studentName" ng-model="data.studentName" blacklist="admin,superadmin" required/>
+   <span ng-show="myForm.studentName.$dirty&&myForm.studentName.$error.blacklist">
+      The phrase "{{data.studentName}}" is blacklisted</span>
+   <span ng-show="myForm.studentName.$dirty&&myForm.studentName.$error.required">required</span>
+   <button type="submit" ng-disabled="myForm.$invalid">Submit</button>
+</form>
+
+<script src="js/angular.js"></script>
+<script src="js/angular-messages.js"></script>
+<script type="text/javascript" src="js/app.js">
+  
+</script>
+</body>
+</html>
