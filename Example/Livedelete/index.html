@@ -1,0 +1,21 @@
+<html ng-app="StudentApp">
+<head>
+	<title>First Example</title>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/owner/owner-delete.controller.js"></script>
+	   <link rel="stylesheet" href="css/bootstrap.css">
+		<script type="text/javascript" src="js/services/owner/owner.service.js"></script>
+</head>
+<body>
+	<div ng-controller="OwnerDeleteController as ownerDeleteCtrl">
+		<form ng-submit="ownerDeleteCtrl.delete()">
+			<div class="form-group">
+				<label>Id</label>
+				<input type="text" class="form-control" name="firstname" ng-model="ownerDeleteCtrl.owner.id">
+			</div>			
+			<input type="submit" class="btn btn-default">Insert</button>
+		</form>
+	</div>
+</body>
+</html>
