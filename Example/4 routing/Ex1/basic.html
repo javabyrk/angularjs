@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="js/angular.js"></script>
+    
+	<script src="js/angular-route.js"></script>
+    <script type="text/javascript">
+	
+	var myApp = angular.module("MyApp", ["ngRoute"]);
+
+	myApp.config(function($routeProvider) {
+
+		$routeProvider.when("/page1", {
+			template : "page1"
+		});
+
+		$routeProvider.when("/page2", {
+			template : "page2"
+		});
+
+		$routeProvider.otherwise( {
+			template : "home"
+		});
+	});
+	
+	</script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  <body ng-app="MyApp">
+    <a href="#/page1">page1</a>
+	<a href="#/page2">page2</a>
+	<br/>
+	
+	<div ng-view></div>
+  </body>
+</html>

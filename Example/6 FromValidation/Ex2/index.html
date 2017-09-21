@@ -1,0 +1,24 @@
+<html ng-app="studentApp">
+<head><title>Student App</title></head>
+<body>
+
+  <form name="userForm">
+    <p>Username:<br>
+      <input type="text" name="user" ng-model="user" ng-maxlength="6"/>
+      <span style="color:red" ng-show="userForm.user.$dirty && userForm.user.$invalid">
+        <span ng-show="userForm.user.$error.maxlength">Username cannot be more than 6 characters.</span>
+        </span>
+      <span>
+    </p>
+    <input type="submit"
+           value="Submit"
+           ng-disabled="userForm.$invalid"/>
+  </form>
+
+<script src="js/angular.js"></script>
+
+<script type="text/javascript">
+  angular.module('studentApp', []);
+</script>
+</body>
+</html>

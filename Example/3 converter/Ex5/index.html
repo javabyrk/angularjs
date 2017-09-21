@@ -1,0 +1,24 @@
+<html>
+  <head>    
+
+	<script type="text/javascript" src="js/angular.js"></script>
+    
+    <script type="text/javascript" src="js/sample.js"></script>
+
+	</head>
+
+  <body>
+    <div ng-app="userApp">
+	  <div ng-controller="userCtrl">
+		<ul>
+			<li ng-repeat="number in numbers">
+
+				{{ number | mycurrency:'Rs':'.00'}}
+
+			</li>
+		</ul>
+
+	  <div>	
+	</div>		
+  </body>
+</html>

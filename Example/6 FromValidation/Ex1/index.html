@@ -1,0 +1,20 @@
+<html ng-app="studentApp">
+<head><title>Student App</title></head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<body>
+
+  <form name="userForm" ng-controller="studentController">
+      Password <input type="password" ng-model="password" ng-change="verify();"><br/>       
+      Confirm Password <input type="password" ng-readonly="verification" ng-model="confirmPassword"><br/>
+    </p>
+   
+    <input type="submit" value="Submit" ng-disabled="userForm.$invalid">
+  </form>
+
+<script src="js/angular.js"></script>
+<script src="js/angular-messages.js"></script>
+<script type="text/javascript" src="js/app.js">
+  
+</script>
+</body>
+</html>

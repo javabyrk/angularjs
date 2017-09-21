@@ -1,0 +1,34 @@
+<html>
+    <script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/sample.js"></script>
+  <body>
+    <div ng-app="userApp">
+      <div ng-controller="UserCtrl">
+        <table class="table table-bordered">
+          <thead>
+            <th><a ng-click="param='name';">Name</a></th>
+            <th><a ng-click="param='address'">Address</a></th>
+            <th><a ng-click="param='phone_number'">Phone Number</a></th>
+            <th></th>
+            <th ng-if="users.length > 0"></th>
+          </thead>
+          <tbody >
+            <tr ng-repeat="user in users | orderBy:param">
+              <td>
+                {{user.name}}
+              </td>
+              <td>
+                {{user.address}}
+              </td>
+              <td>
+                {{user.phone_number}}
+              </td>          
+            </tr>		  	
+            <tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+</html>

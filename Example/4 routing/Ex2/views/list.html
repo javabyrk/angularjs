@@ -1,0 +1,10 @@
+<div>
+	<table class="table">
+		<tr><td>Id</td><td>Name</td><td>Age</td></tr> 
+		<tr ng-repeat="Student in listctrl.Students">
+			<td><a href="#/details/{{Students.indexOf(Student)}}">{{Student.id}}</a></td>
+			<td>{{Student.name}}</td>
+			<td>{{Student.age}}</td>
+		</tr>
+	</table>
+</div>

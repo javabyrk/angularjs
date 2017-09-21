@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!-- Import AngularJS library -->
+    <script type="text/javascript" src="js/angular.js"></script>
+    
+    <!-- Import application specific code -->
+    <script type="text/javascript" src="js/sample.js"></script>
+    <link href="css/sample.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+  <!-- This div will use the userApp application module -->
+    <div ng-app="userApp">
+      
+      <!-- This div will use the UserCtrl controller -->
+      <div ng-controller="UserCtrl">
+        <table class="table table-bordered">
+          <thead>
+            <th>Name</th>
+            <th>Address</th>
+          </thead>
+          <thead>
+            <td><input type="text" ng-model="userData.name"/></td>
+            <td><input type="text" ng-model="userData.city"/></td>
+          </thead>
+		  <tbody>
+            <!-- Normal Mode Template -->
+            <tr ng-repeat="user in users | filter:userData">
+              <td>{{user.name}} </td>
+              <td>{{user.city}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html ng-app="studentApp">
+<head><title>Student App</title></head>
+<body>
+
+  <form name="userForm" ng-controller="studentController">
+    <p>Username:<br>
+      <input type="text" name="user" required ng-model="user" ng-minlength="2"
+
+        ng-maxlength="6"/>
+      <span style="color:red" ng-show="userForm.user.$invalid">
+         <span ng-show="userForm.user.$error.required">required</span>
+        <span ng-show="userForm.user.$error.minlength">Username should be atleast 2 characters.</span>
+        <span ng-show="userForm.user.$error.maxlength">Username should be at max 6 characters.</span>
+        </span>
+        <span style="color:green" ng-show="userForm.user.$dirty && userForm.user.$valid">
+          valid value
+        </span>
+    </p>
+    
+    <input type="text" ng-model="username"/>
+    <input type="text" ng-readonly="username.length==0" />
+
+    <input type="text" ng-model="email" ng-if="username.length!=0" />
+
+    <input type="checkbox" ng-model="test" />
+    <input type="submit" value="Submit" ng-disabled="!test">
+  </form>
+
+<script src="js/angular.js"></script>
+<script src="js/angular-messages.js"></script>
+<script type="text/javascript" src="js/app.js">
+  
+</script>
+</body>
+</html>
