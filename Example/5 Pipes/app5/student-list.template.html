@@ -1,0 +1,8 @@
+<div class="row">
+<h2>List of Students and their pocket money and jee scores.</h2>
+<div class="row" *ngFor="let student of students">
+  <div class="col-sm-8">
+    <h4>{{student|studentData: 'test' }}</h4>
+  </div>
+</div>
+

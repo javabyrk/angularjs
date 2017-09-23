@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-12">
+      Search <div class="col-sm-4 col-sm-offset-5">
+      <input #searchBox class="form-control input-lg"
+        placeholder="Search"
+        (keyup)="0" />
+  </div>
+</div>
+<h2>List of Students</h2>
+<div class="row" *ngFor="let student of students | contentFilter:searchBox.value">
+  <div class="col-sm-8">
+    <h4>{{student.id}}: {{student.name | lowercase}} : {{student.pocketMoney | currency:'INR' }}: {{student.jeeScore }} : {{student.attemptDate | date: 'short' }}</h4>
+  </div>
+</div>
